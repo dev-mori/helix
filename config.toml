@@ -12,6 +12,7 @@ select = "underline"
 
 [editor.file-picker]
 hidden = false
+git-ignore = false
 
 [editor.auto-save]
 after-delay.enable = true
