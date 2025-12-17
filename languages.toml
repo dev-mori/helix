@@ -1,0 +1,32 @@
+# Helix language server setup for Ruby & TypeScript.
+# Uses built-in defaults from the official docs.
+
+[language-server.ruby-lsp]
+command = "ruby-lsp"
+# Enable common features; requires the gem available in your project or globally.
+config = { diagnostics = true, formatting = true }
+
+[language-server.solargraph]
+command = "solargraph"
+args = ["stdio"]
+
+[language-server.typescript-language-server]
+command = "typescript-language-server"
+args = ["--stdio"]
+config = { hostInfo = "helix" }
+
+[[language]]
+name = "ruby"
+language-servers = ["ruby-lsp", "solargraph"]
+
+[[language]]
+name = "typescript"
+language-servers = ["typescript-language-server"]
+
+[[language]]
+name = "tsx"
+language-servers = ["typescript-language-server"]
+
+[[language]]
+name = "javascript"
+language-servers = ["typescript-language-server"]
