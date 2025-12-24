@@ -16,3 +16,10 @@ hidden = false
 [editor.auto-save]
 after-delay.enable = true
 after-delay.timeout = 2000
+
+[keys.normal]
+C-s = ":w" # Maps Ctrl-s to the typable command :w which is an alias for :write (save file)
+y = ":clipboard-yank"
+
+[keys.insert]
+j = { k = "normal_mode" } # Maps `jk` to exit insert mode

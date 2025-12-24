@@ -15,18 +15,22 @@ command = "typescript-language-server"
 args = ["--stdio"]
 config = { hostInfo = "helix" }
 
+[language-server.fs_watcher_lsp]
+command = "fs_watcher_lsp" # maybe use the path where it is installed
+args = []
+
 [[language]]
 name = "ruby"
-language-servers = ["ruby-lsp", "solargraph"]
+language-servers = ["ruby-lsp", "solargraph", "fs_watcher_lsp"]
 
 [[language]]
 name = "typescript"
-language-servers = ["typescript-language-server"]
+language-servers = ["typescript-language-server", "fs_watcher_lsp"]
 
 [[language]]
 name = "tsx"
-language-servers = ["typescript-language-server"]
+language-servers = ["typescript-language-server", "fs_watcher_lsp"]
 
 [[language]]
 name = "javascript"
-language-servers = ["typescript-language-server"]
+language-servers = ["typescript-language-server", "fs_watcher_lsp"]
