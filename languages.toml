@@ -2,20 +2,24 @@
 # Uses built-in defaults from the official docs.
 
 [language-server.ruby-lsp]
+# gem install ruby-lsp
 command = "ruby-lsp"
 # Enable common features; requires the gem available in your project or globally.
 config = { diagnostics = true, formatting = true }
 
 [language-server.solargraph]
+# gem install solargraph
 command = "solargraph"
 args = ["stdio"]
 
 [language-server.typescript-language-server]
+# npm install -g typescript-language-server typescript
 command = "typescript-language-server"
 args = ["--stdio"]
 config = { hostInfo = "helix" }
 
 [language-server.fs_watcher_lsp]
+# cargo install fs_watcher_lsp
 command = "fs_watcher_lsp" # maybe use the path where it is installed
 args = []
 
